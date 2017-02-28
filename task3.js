@@ -17,3 +17,11 @@ let adjacentElementProduct = (inputArray) => {
 let array = [-1,-1,-1,-2];
 let result = adjacentElementProduct(array);
 console.log('result', result);
+
+/*
+Solution with more vote
+function adjacentElementProduct(inputArray){
+    return Math.max(...inputArray.slice(1).map((x,i)=> [x*inputArray[i]]));
+}
+let result = adjacentElementProduct([1,2,3,4]);
+console.log('result', result);*/
