@@ -22,13 +22,33 @@ Guaranteed constraints:
 The number of the century the year is in.
 
 */
-
-
-
+// My solution
 function centuryFromYear(year) {
     return (year >= 1 && year <= 2005) ? year % 100 == 0 ? year / 100 : parseInt((year / 100) + 1) : 'year not in range !';
 }
 console.log(centuryFromYear(1900));
+
+
+// Other's solution
+function centuryFromYear1(year) {
+    return Math.ceil(year / 100)
+}
+console.log(centuryFromYear1(1900));
+
+
+function centuryFromYear2(year) {
+    return Math.floor((year - 1) / 100) + 1;
+}
+console.log(centuryFromYear2(1900));
+
+centuryFromYear3 = y => (y - 1) / 100 + 1 | 0;
+console.log(centuryFromYear3(1900));
+
+function centuryFromYear4(year) {
+    return ~~((year - 1) / 100) + 1
+}
+console.log(centuryFromYear4(1900));
+
 
 // 100 years = 1 century;
 //  1 year = 1/100 century;
