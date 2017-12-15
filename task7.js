@@ -45,18 +45,46 @@ True if both names have the same sum, false otherwise.
 // a = 1
 // z = 26
 
-let bestFriendNames = (name1, name2) => {
-    let j = 1;
-    for (let i = 97; i < 122; i++) {
-        console.log('j', j)
-        j++;
-    }
-    console.log('j', j);
-    /* name1.map(a => {
-        console.log('a', a);
-    }) */
-    return true || false;
+/* let f = a => {
+    console.log('a1', a);
+    return eval(Buffer(a).join`%32+`)
+};
+
+let bestFriendNames = (a, b) => {
+    console.log('a', a)
+    console.log('b', b);
+    return f(a) === f(b)
+};
+
+console.log(bestFriendNames('Bob', 'Dan')); */
+
+// console.log(Buffer('Bob').join('+'));
+
+let bf = (name1, name2) => {
+    name1 = name1.toLowerCase().replace(/\s/g, '');
+    name2 = name2.toLowerCase().replace(/\s/g, '');
+
+    name1 = Buffer(name1).join('+');
+    name2 = Buffer(name2).join('+');
+
+    name1 = name1.split('+');
+    name2 = name2.split('+');
+    let totalCountName1 = 0;
+    let totalCountName2 = 0;
+    name1.map(n => {
+        totalCountName1 += parseInt(n);
+    });
+
+    name2.map(n => {
+        totalCountName2 += parseInt(n);
+    })
+    console.log('totalCountName1', totalCountName1);
+    console.log('totalCountName2', totalCountName2);
+
+
+
+    console.log('name1', name1);
+    console.log('name2', name2);
 
 }
-
-console.log(bestFriendNames('abc', 'def'));
+bf('          Bob                     ', 'dan');
