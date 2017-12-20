@@ -40,15 +40,24 @@ let stringToArray = (str) => {
     return strArray;
 }
 
+// Covert array to string
+let arrayToString = (arr) => {
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+        str += arr[i];
+    }
+    return str;
+}
+
 // Reverse the string
 let reverseString = (str) => {
     let reverseString = [];
-    for (let i = stringToArray(str).length - 1; i >= 0; i--) {
+    let strArray = stringToArray(str);
+    for (let i = strArray.length - 1; i >= 0; i--) {
         reverseString.push(strArray[i]);
     }
-    return reverseString.join('');
+    return arrayToString(reverseString);
 }
-console.log(reverseString('abcdefghijklmnopqrstuvwxyz')); 
 
 */
 
