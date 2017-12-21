@@ -9,7 +9,7 @@ function makeArrayConsecutive2(statues) {
 makeArrayConsecutive2([6, 2, 3, 8])
  */
 
-// Own solution
+/* My solution */
 let makeConsecutive2 = (statues) => {
     let sortedStatues = statues.sort((a, b) => a - b);
     let count = 0, j = 0;

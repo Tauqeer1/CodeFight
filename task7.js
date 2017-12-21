@@ -45,7 +45,7 @@ True if both names have the same sum, false otherwise.
 // a = 1
 // z = 26
 
-
+/* Not solved */
 // Other's solution
 
 /* let f = a => {

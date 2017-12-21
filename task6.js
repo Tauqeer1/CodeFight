@@ -5,6 +5,7 @@ function TimeConvert(num) take the num parameter being passed and return the num
 be 1:3). Separate the number of hours and minutes with a colon.  
 */
 
+/* My Solution */
 const timeConvert = (num) => {
     let hour = (num / 60).toString().split(".")[0];
     let min = ((num % 60).toString().length === 1) ? ('0' + (num % 60).toString()) : (num % 60).toString();
