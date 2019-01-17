@@ -50,7 +50,7 @@ for its second occurrence. If there are no such elements, return -1.
 }
 
 console.log(firstDuplicate([2, 3, 3, 1, 5, 2])); */
-
+/* Not solved */
 let firstDuplicate = (arr) => {
     // console.log('arr', arr);
     let firstDuplicateNumber = -1;
